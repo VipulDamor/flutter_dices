@@ -13,8 +13,12 @@ class _HomeState extends State<Home> {
    int leftDice = 1;
 
    void diceNumber(){
-     leftDice = Random().nextInt(6)+1;
-     rightdice = Random().nextInt(6)+1;
+     setState(() {
+       leftDice = Random().nextInt(6)+1;
+       rightdice = Random().nextInt(6)+1;
+     });
+
+
    }
   @override
   Widget build(BuildContext context) {
@@ -27,9 +31,7 @@ class _HomeState extends State<Home> {
             Expanded(
               child: TextButton(
                 onPressed: () {
-                  setState(() {
-                    diceNumber();
-                  });
+                  diceNumber();
                 },
                 child: Image.asset(
                   "images/dice$leftDice.png",
@@ -39,10 +41,7 @@ class _HomeState extends State<Home> {
             Expanded(
               child: TextButton(
                 onPressed: () {
-                  setState(() {
-                    diceNumber();
-                  });
-
+                  diceNumber();
                 },
                 child: Image.asset(
                   "images/dice$rightdice.png",
