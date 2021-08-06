@@ -2,6 +2,11 @@
 
 ![alt text](https://github.com/VipulDamor/flutter_dices/blob/master/images/Screenshot_1628250374.png?raw=true)
 
+<p align="center">
+  <img src="https://github.com/VipulDamor/flutter_dices/blob/master/images/Screenshot_1628250374.png" width="350" title="hover text">
+  
+</p>
+
 
 A new Flutter project.
 
