@@ -1,6 +1,21 @@
+import 'dart:math';
 import 'package:flutter/material.dart';
 
-class Home extends StatelessWidget {
+class Home extends StatefulWidget {
+  const Home({Key? key}) : super(key: key);
+
+  @override
+  _HomeState createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+   int rightdice = 1;
+   int leftDice = 1;
+
+   void diceNumber(){
+     leftDice = Random().nextInt(6)+1;
+     rightdice = Random().nextInt(6)+1;
+   }
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -12,20 +27,25 @@ class Home extends StatelessWidget {
             Expanded(
               child: TextButton(
                 onPressed: () {
-                  print("left button click");
+                  setState(() {
+                    diceNumber();
+                  });
                 },
                 child: Image.asset(
-                  "images/dice1.png",
+                  "images/dice$leftDice.png",
                 ),
               ),
             ),
             Expanded(
               child: TextButton(
                 onPressed: () {
-                  print("right button click");
+                  setState(() {
+                    diceNumber();
+                  });
+
                 },
                 child: Image.asset(
-                  "images/dice1.png",
+                  "images/dice$rightdice.png",
                 ),
               ),
             ),
@@ -35,3 +55,4 @@ class Home extends StatelessWidget {
     );
   }
 }
+
