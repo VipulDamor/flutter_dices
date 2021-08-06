@@ -1,5 +1,8 @@
 # flutter_dices2
 
+![alt text](https://github.com/VipulDamor/flutter_dices/blob/master/images/Screenshot_1628250374.png?raw=true)
+
+
 A new Flutter project.
 
 ## Getting Started
